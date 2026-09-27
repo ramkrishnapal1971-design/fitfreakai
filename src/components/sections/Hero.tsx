@@ -50,10 +50,10 @@ function PoseFigure() {
       {bones.map(([a, b], i) => (
         <motion.line
           key={i}
-          x1={joints[a][0]}
-          y1={joints[a][1]}
-          x2={joints[b][0]}
-          y2={joints[b][1]}
+          x1={joints[a]![0]}
+          y1={joints[a]![1]}
+          x2={joints[b]![0]}
+          y2={joints[b]![1]}
           stroke="url(#boneGrad)"
           strokeWidth="2.5"
           strokeLinecap="round"
