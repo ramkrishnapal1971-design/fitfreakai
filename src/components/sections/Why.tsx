@@ -104,7 +104,11 @@ export function AiCore() {
 
         <Reveal>
           <div className="relative mx-auto aspect-square w-full max-w-sm">
-            <div aria-hidden className="pulse-glow absolute inset-6 rounded-full" style={{ background: "var(--gradient-violet)", opacity: 0.25, filter: "blur(30px)" }} />
+            <div
+              aria-hidden
+              className="pulse-glow absolute inset-6 rounded-full"
+              style={{ background: "var(--gradient-violet)", opacity: 0.25, filter: "blur(30px)" }}
+            />
             <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
               {Array.from({ length: 14 }).map((_, i) => {
                 const a = (i / 14) * Math.PI * 2;
@@ -134,7 +138,14 @@ export function AiCore() {
                   />
                 );
               })}
-              <circle cx="100" cy="100" r="34" fill="none" stroke="var(--primary)" strokeWidth="1.5" />
+              <circle
+                cx="100"
+                cy="100"
+                r="34"
+                fill="none"
+                stroke="var(--primary)"
+                strokeWidth="1.5"
+              />
             </svg>
             <motion.div
               className="absolute inset-[34%] grid place-items-center rounded-full glass-strong text-center"

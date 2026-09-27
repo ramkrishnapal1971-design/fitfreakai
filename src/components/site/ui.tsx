@@ -43,7 +43,10 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`relative overflow-hidden px-5 py-24 md:px-10 md:py-32 ${className}`}>
+    <section
+      id={id}
+      className={`relative overflow-hidden px-5 py-24 md:px-10 md:py-32 ${className}`}
+    >
       <div className="mx-auto w-full max-w-7xl">{children}</div>
     </section>
   );
@@ -62,14 +65,14 @@ export function SectionHead({
 }) {
   return (
     <Reveal
-      className={
-        align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl text-left"
-      }
+      className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl text-left"}
     >
       {eyebrow ? <p className="eyebrow mb-4">{eyebrow}</p> : null}
       <h2 className="text-balance text-3xl font-bold leading-[1.1] md:text-5xl">{title}</h2>
       {subtitle ? (
-        <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">{subtitle}</p>
+        <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+          {subtitle}
+        </p>
       ) : null}
     </Reveal>
   );

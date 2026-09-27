@@ -8,13 +8,7 @@ import { AdaptivePlans, AiCore, Why } from "@/components/sections/Why";
 import { ExerciseCoach, Privacy } from "@/components/sections/Privacy";
 import { Avatar, Gamification, Wellness } from "@/components/sections/Game";
 import { Community, Mentorship } from "@/components/sections/Community";
-import {
-  Architecture,
-  Ecosystem,
-  Impact,
-  Journey,
-  Safety,
-} from "@/components/sections/Tech";
+import { Architecture, Ecosystem, Impact, Journey, Safety } from "@/components/sections/Tech";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 const title = "FitFreak AI — Your Fitness. Your AI. Your Privacy.";

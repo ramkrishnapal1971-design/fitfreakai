@@ -78,7 +78,10 @@ export function Solution() {
       <div className="relative mt-20 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
           <div className="relative mx-auto aspect-square w-full max-w-md">
-            <div aria-hidden className="spin-slow absolute inset-0 rounded-full border border-dashed border-lavender/25" />
+            <div
+              aria-hidden
+              className="spin-slow absolute inset-0 rounded-full border border-dashed border-lavender/25"
+            />
             {cycle.map((step, i) => {
               const angle = (i / cycle.length) * Math.PI * 2 - Math.PI / 2;
               return (

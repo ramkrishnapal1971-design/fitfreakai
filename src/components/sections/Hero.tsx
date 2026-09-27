@@ -80,7 +80,10 @@ function PoseFigure() {
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-screen items-center overflow-hidden px-5 pt-28 pb-16 md:px-10">
+    <section
+      id="top"
+      className="relative flex min-h-screen items-center overflow-hidden px-5 pt-28 pb-16 md:px-10"
+    >
       <div aria-hidden className="hero-aura absolute inset-0" />
       <div aria-hidden className="grid-floor absolute inset-0 opacity-70" />
       <div
@@ -121,8 +124,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            FitFreak AI combines adaptive fitness planning, AI coaching, real-time exercise analysis,
-            gamification and privacy-first technology into one intelligent fitness ecosystem.
+            FitFreak AI combines adaptive fitness planning, AI coaching, real-time exercise
+            analysis, gamification and privacy-first technology into one intelligent fitness
+            ecosystem.
           </motion.p>
 
           <motion.div
@@ -153,7 +157,10 @@ export function Hero() {
           transition={{ duration: 1 }}
           className="relative mx-auto aspect-square w-full max-w-lg"
         >
-          <div aria-hidden className="spin-slow absolute inset-4 rounded-full border border-lavender/20" />
+          <div
+            aria-hidden
+            className="spin-slow absolute inset-4 rounded-full border border-lavender/20"
+          />
           <div
             aria-hidden
             className="spin-slow absolute inset-12 rounded-full border border-dashed border-primary/40"

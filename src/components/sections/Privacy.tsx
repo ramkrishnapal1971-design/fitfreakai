@@ -104,7 +104,15 @@ export function Privacy() {
               <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
                 <span>DEVICE</span>
                 <svg viewBox="0 0 100 4" className="h-1 flex-1">
-                  <line x1="0" y1="2" x2="100" y2="2" stroke="var(--neon)" strokeWidth="2" className="flow-dash" />
+                  <line
+                    x1="0"
+                    y1="2"
+                    x2="100"
+                    y2="2"
+                    stroke="var(--neon)"
+                    strokeWidth="2"
+                    className="flow-dash"
+                  />
                 </svg>
                 <span>CLOUD</span>
               </div>

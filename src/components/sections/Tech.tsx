@@ -189,14 +189,19 @@ const journey = [
 export function Journey() {
   return (
     <Section id="journey">
-      <SectionHead eyebrow="User Journey" title={<>How the Loop <span className="text-gradient">Works</span></>} />
+      <SectionHead
+        eyebrow="User Journey"
+        title={
+          <>
+            How the Loop <span className="text-gradient">Works</span>
+          </>
+        }
+      />
       <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {journey.map((j, i) => (
           <Reveal key={j} index={i}>
             <Card className="h-full">
-              <p className="font-display text-3xl font-extrabold text-primary/40">
-                0{i + 1}
-              </p>
+              <p className="font-display text-3xl font-extrabold text-primary/40">0{i + 1}</p>
               <p className="mt-3 font-display text-sm font-semibold tracking-[0.1em]">{j}</p>
             </Card>
           </Reveal>
