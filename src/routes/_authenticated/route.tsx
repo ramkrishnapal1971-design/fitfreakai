@@ -16,16 +16,6 @@ export const Route = createFileRoute("/_authenticated")({
 
 const NAV = [
   { to: "/dashboard", label: "Command Hub", icon: "◈" },
-  { to: "/goals", label: "Goals", icon: "◎" },
-  { to: "/plans", label: "Plans", icon: "▦" },
-  { to: "/progress", label: "Progress", icon: "↗" },
-  { to: "/streak", label: "Streak", icon: "✦" },
-  { to: "/coins", label: "Coins", icon: "◉" },
-  { to: "/coach", label: "AI Coach", icon: "✧" },
-  { to: "/community", label: "Community", icon: "◍" },
-  { to: "/wellness", label: "Wellness", icon: "❀" },
-  { to: "/profile", label: "Profile", icon: "◐" },
-  { to: "/help", label: "Help", icon: "?" },
 ] as const;
 
 function Shell() {

@@ -64,7 +64,7 @@ export function goalTargets(p: ProfileLike, type: string, pace: string) {
   const base = tdee(p) ?? 2000;
   const delta = pace === "fast" ? 700 : pace === "slow" ? 300 : 500;
   const cals = type === "lose_weight" ? base - delta : type === "gain_weight" || type === "build_muscle" ? base + Math.round(delta / 2) : base;
-  const r = RATIOS[type] ?? RATIOS.maintain!;
+  const r = RATIOS[type] ?? RATIOS["maintain"]!;
   return {
     daily_calories: Math.max(1200, cals),
     macros: { protein: Math.round((cals * r.protein) / 4), carbs: Math.round((cals * r.carbs) / 4), fats: Math.round((cals * r.fats) / 9) },
@@ -82,7 +82,7 @@ const shuffle = <T,>(a: T[]) => [...a].sort(() => 0.5 - Math.random());
 const SPLIT = ["chest", "back", "legs", "cardio", "fullbody", "shoulders", "rest"];
 const GROUP: Record<string, RegExp> = { chest: /bench|push/i, back: /deadlift|row|pull/i, legs: /squat|leg|lunge/i, cardio: /jog|cycl|jump|hiit|run/i, fullbody: /plank|yoga|burpee/i, shoulders: /shoulder|press/i };
 
-type Raw = { name: string; tags: string[]; [k: string]: unknown };
+type Raw = { name: string; tags: string[]; sets?: number; reps?: number; durationMinutes?: number; image?: string; calories?: number; protein?: number; carbs?: number; fats?: number };
 export function generateWeek(goal: { type: string; pace: string; daily_calories?: number | null; macros?: Macros | null }): DailyPlan[] {
   const ex = (exercisesData as Raw[]).filter((e) => e.tags.includes(goal.type) || e.tags.includes(goal.pace));
   const ms = (mealsData as Raw[]).filter((m) => m.tags.includes(goal.type) || m.tags.includes(goal.pace));
